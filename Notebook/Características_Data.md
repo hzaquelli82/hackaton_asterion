@@ -29,13 +29,14 @@ Define agrupaciones de productos, probablemente para estrategias de marketing co
 
 ### Columnas
 
-| Columna | Non-Null Count | Dtype |
-| :--- | :--- | :--- |
-| `sku` | 80 non-null | object |
-| `product_name` | 80 non-null | object |
-| `price_group_id` | 80 non-null | object |
-| `price_group_name` | 80 non-null | object |
-| `group_type` | 80 non-null | object |
+| Columna | Non-Null Count | Dtype | Descripción |
+| :--- | :--- | :--- | :--- |
+| `sku` | 80 non-null | object | Código de producto |
+| `product_name` | 80 non-null | object | Nombre del Producto |
+| `price_group_id` | 80 non-null | object | ID del grupo de producto |
+| `price_group_name` | 80 non-null | object | Nombre del grupo de producto |
+| `group_type` | 80 non-null | object | Tipo de grupo de producto |
+
 
 ---
 
@@ -45,17 +46,18 @@ Es el catálogo maestro de productos. Contiene la jerarquía (categoría, grupo,
 
 ### Columnas
 
-| Columna | Non-Null Count | Dtype |
-| :--- | :--- | :--- |
-| `sku` | 861 non-null | object |
-| `product_name` | 861 non-null | object |
-| `category` | 861 non-null | object |
-| `group` | 861 non-null | object |
-| `subgroup` | 861 non-null | object |
-| `brand` | 861 non-null | object |
-| `base_price` | 861 non-null | float64 |
-| `initial_ticket_price` | 861 non-null | float64 |
-| `costos` | 861 non-null | float64 |
+| Columna | Non-Null Count | Dtype | Descripción |
+| :--- | :--- | :--- | :--- |
+| `sku` | 861 non-null | object | Código de producto |
+| `product_name` | 861 non-null | object | Nombre del producto |
+| `category` | 861 non-null | object | Categoría del producto |
+| `group` | 861 non-null | object | Grupo del producto |
+| `subgroup` | 861 non-null | object | Subgrupo del producto |
+| `brand` | 861 non-null | object | Marca del producto |
+| `base_price` | 861 non-null | float64 | Precio base del producto |
+| `initial_ticket_price` | 861 non-null | float64 | Precio inicial de venta del producto |
+| `costos` | 861 non-null | float64 | Costos del producto |
+
 
 ---
 
@@ -65,12 +67,13 @@ Asigna cada tienda a un "cluster" o agrupación geográfica/estratégica.
 
 ### Columnas
 
-| Columna | Non-Null Count | Dtype |
-| :--- | :--- | :--- |
-| `STORE_ID` | 157 non-null | object |
-| `BRAND` | 157 non-null | object |
-| `STORE_NAME` | 157 non-null | object |
-| `CLUSTER` | 140 non-null | object |
+| Columna | Non-Null Count | Dtype | Descripción |
+| :--- | :--- | :--- | :--- |
+| `STORE_ID` | 157 non-null | object | Identificador único de la tienda |
+| `BRAND` | 157 non-null | object | Marca de la tienda |
+| `STORE_NAME` | 157 non-null | object | Nombre de la tienda |
+| `CLUSTER` | 140 non-null | object | Cluster geográfico al que pertenece la tienda |
+
 
 ---
 
@@ -80,20 +83,21 @@ Contiene información detallada de cada tienda, como su dirección, tipo, regió
 
 ### Columnas
 
-| Columna | Non-Null Count | Dtype |
-| :--- | :--- | :--- |
-| `STORE_ID` | 157 non-null | object |
-| `BRAND` | 157 non-null | object |
-| `STORE_NAME` | 157 non-null | object |
-| `ADDRESS1` | 157 non-null | object |
-| `ADDRESS2` | 43 non-null | object |
-| `CITY` | 157 non-null | object |
-| `STATE` | 157 non-null | object |
-| `ZIP` | 151 non-null | object |
-| `OPENDATE` | 157 non-null | object |
-| `CLOSEDATE` | 18 non-null | object |
-| `STORE_TYPE` | 155 non-null | object |
-| `REGION` | 157 non-null | object |
+| Columna | Non-Null Count | Dtype | Descripción |
+| :--- | :--- | :--- | :--- |
+| `STORE_ID` | 157 non-null | object | Identificador único de la tienda |
+| `BRAND` | 157 non-null | object | Marca de la tienda |
+| `STORE_NAME` | 157 non-null | object | Nombre de la tienda |
+| `ADDRESS1` | 157 non-null | object | Dirección de la tienda |
+| `ADDRESS2` | 43 non-null | object | Dirección adicional de la tienda |
+| `CITY` | 157 non-null | object | Ciudad de la tienda |
+| `STATE` | 157 non-null | object | Estado de la tienda |
+| `ZIP` | 151 non-null | object | Código postal de la tienda |
+| `OPENDATE` | 157 non-null | object | Fecha de apertura de la tienda |
+| `CLOSEDATE` | 18 non-null | object | Fecha de cierre de la tienda |
+| `STORE_TYPE` | 155 non-null | object | Tipo de tienda |
+| `REGION` | 157 non-null | object | Región de la tienda |
+
 
 ---
 
@@ -103,17 +107,18 @@ Este es el dataset principal con el registro de todas las transacciones de venta
 
 ### Columnas
 
-| Columna | Non-Null Count | Dtype |
-| :--- | :--- | :--- |
-| `TRANSACTION_ID` | 19004759 non-null | int64 |
-| `DATE` | 19004759 non-null | object |
-| `STORE_ID` | 19004759 non-null | object |
-| `SKU` | 19004759 non-null | object |
-| `QUANTITY` | 19004759 non-null | float64 |
-| `PRICE` | 19004759 non-null | float64 |
-| `TOTAL_SALES` | 19004759 non-null | float64 |
-| `SUBGROUP` | 19004759 non-null | object |
-| `STORE_SUBGROUP_DATE_ID` | 19004759 non-null | object |
+| Columna | Non-Null Count | Dtype | Descripción |
+| :--- | :--- | :--- | :--- |
+| `TRANSACTION_ID` | 19004759 non-null | int64 | Identificador único de la transacción |
+| `DATE` | 19004759 non-null | object | Fecha de la transacción |
+| `STORE_ID` | 19004759 non-null | object | Identificador de la tienda |
+| `SKU` | 19004759 non-null | object | Código de producto |
+| `QUANTITY` | 19004759 non-null | float64 | Cantidad vendida |
+| `PRICE` | 19004759 non-null | float64 | Precio unitario del producto |
+| `TOTAL_SALES` | 19004759 non-null | float64 | Total de ventas |
+| `SUBGROUP` | 19004759 non-null | object | Subgrupo del producto |
+| `STORE_SUBGROUP_DATE_ID` | 19004759 non-null | object | Identificador generado con tienda, subgrupo y fecha |
+
 
 ---
 
